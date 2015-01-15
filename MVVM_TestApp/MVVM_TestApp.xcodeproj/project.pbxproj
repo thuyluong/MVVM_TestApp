@@ -13,13 +13,13 @@
 		DA2170731A66D66500B351D2 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2170721A66D66500B351D2 /* Account.m */; };
 		DA2170761A66D66E00B351D2 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2170751A66D66E00B351D2 /* Post.m */; };
 		DA2170791A66D6A300B351D2 /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2170781A66D6A300B351D2 /* DeviceInfo.m */; };
+		DA46B01C1A6816E60032E87B /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46B01B1A6816E60032E87B /* Constant.m */; };
 		DA8E7F341A66CE010041B782 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E7F331A66CE010041B782 /* main.m */; };
 		DA8E7F371A66CE010041B782 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E7F361A66CE010041B782 /* AppDelegate.m */; };
 		DA8E7F3D1A66CE010041B782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8E7F3B1A66CE010041B782 /* Main.storyboard */; };
 		DA8E7F3F1A66CE010041B782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8E7F3E1A66CE010041B782 /* Images.xcassets */; };
 		DA8E7F421A66CE010041B782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8E7F401A66CE010041B782 /* LaunchScreen.xib */; };
 		DA8E7F4E1A66CE010041B782 /* MVVM_TestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E7F4D1A66CE010041B782 /* MVVM_TestAppTests.m */; };
-		DA8E7F5D1A66CF1F0041B782 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E7F591A66CF1F0041B782 /* ViewController.m */; };
 		DA8E7F601A66D0030041B782 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E7F5F1A66D0030041B782 /* LoginViewModel.m */; };
 		E3E3BF2C5372C184744313C1 /* libPods-MVVM_TestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 099A3415BB4581527F7681DB /* libPods-MVVM_TestApp.a */; };
 /* End PBXBuildFile section */
@@ -50,6 +50,8 @@
 		DA2170751A66D66E00B351D2 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		DA2170771A66D6A300B351D2 /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
 		DA2170781A66D6A300B351D2 /* DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfo.m; sourceTree = "<group>"; };
+		DA46B01A1A6816E60032E87B /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		DA46B01B1A6816E60032E87B /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		DA8E7F2E1A66CE010041B782 /* MVVM_TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8E7F321A66CE010041B782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8E7F331A66CE010041B782 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -61,8 +63,6 @@
 		DA8E7F471A66CE010041B782 /* MVVM_TestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVM_TestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8E7F4C1A66CE010041B782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8E7F4D1A66CE010041B782 /* MVVM_TestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVM_TestAppTests.m; sourceTree = "<group>"; };
-		DA8E7F581A66CF1F0041B782 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DA8E7F591A66CF1F0041B782 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DA8E7F5E1A66D0030041B782 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		DA8E7F5F1A66D0030041B782 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +130,8 @@
 				DA2170751A66D66E00B351D2 /* Post.m */,
 				DA2170771A66D6A300B351D2 /* DeviceInfo.h */,
 				DA2170781A66D6A300B351D2 /* DeviceInfo.m */,
+				DA46B01A1A6816E60032E87B /* Constant.h */,
+				DA46B01B1A6816E60032E87B /* Constant.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,8 +205,6 @@
 		DA8E7F571A66CF1F0041B782 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DA8E7F581A66CF1F0041B782 /* ViewController.h */,
-				DA8E7F591A66CF1F0041B782 /* ViewController.m */,
 				DA2170601A66D3E700B351D2 /* LoginViewController.h */,
 				DA2170611A66D3E700B351D2 /* LoginViewController.m */,
 			);
@@ -371,7 +371,7 @@
 			files = (
 				DA8E7F601A66D0030041B782 /* LoginViewModel.m in Sources */,
 				DA2170731A66D66500B351D2 /* Account.m in Sources */,
-				DA8E7F5D1A66CF1F0041B782 /* ViewController.m in Sources */,
+				DA46B01C1A6816E60032E87B /* Constant.m in Sources */,
 				DA2170621A66D3E700B351D2 /* LoginViewController.m in Sources */,
 				DA2170761A66D66E00B351D2 /* Post.m in Sources */,
 				DA21706A1A66D48300B351D2 /* NSString+Addition.m in Sources */,

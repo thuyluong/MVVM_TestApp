@@ -7,7 +7,13 @@
 //
 
 #import "LoginViewModel.h"
+#import "NSString+Addition.h"
 
 @implementation LoginViewModel
+
+- (BOOL)userNameIsEmailFormat
+{
+    return [self.userName isEmailFormat];
+}
 
 @end

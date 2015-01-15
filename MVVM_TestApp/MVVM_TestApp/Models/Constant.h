@@ -1,15 +1,13 @@
 //
-//  NSString+Addition.h
+//  Constant.h
 //  MVVM_TestApp
 //
-//  Created by ThuyLuong on 1/14/15.
+//  Created by ThuyLuong on 1/15/15.
 //  Copyright (c) 2015 ThuyLuong. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Addition)
-
-- (BOOL)isEmailFormat;
+@interface Constant : NSObject
 
 @end

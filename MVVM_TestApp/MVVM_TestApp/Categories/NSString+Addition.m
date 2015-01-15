@@ -10,4 +10,9 @@
 
 @implementation NSString (Addition)
 
+- (BOOL)isEmailFormat
+{
+    return YES;
+}
+
 @end

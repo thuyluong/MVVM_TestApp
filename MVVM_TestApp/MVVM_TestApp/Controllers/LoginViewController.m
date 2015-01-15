@@ -7,7 +7,47 @@
 //
 
 #import "LoginViewController.h"
+#import "LoginViewModel.h"
+
+@interface LoginViewController()
+
+@property (nonatomic, weak) IBOutlet UITextField *userNameTf;
+@property (nonatomic, weak) IBOutlet UITextField *passwordTf;
+@property (nonatomic, strong) LoginViewModel *loginViewModel;
+
+- (IBAction)loginAction:(id)sender;
+
+@end
 
 @implementation LoginViewController
+
+#pragma mark - Life Cycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
+#pragma mark - 
+
+- (LoginViewModel *)loginViewModel
+{
+    dispatch_once_t once;
+    dispatch_once(&once, ^{
+        _loginViewModel = [[LoginViewModel alloc] init];
+    });
+    return _loginViewModel;
+}
+
+#pragma mark - Action
+
+- (IBAction)loginAction:(id)sender
+{
+    self.loginViewModel.userName = self.userNameTf.text;
+    self.loginViewModel.password = self.passwordTf.text;
+    if ([self.loginViewModel userNameIsEmailFormat]) {
+        
+    }
+}
 
 @end
