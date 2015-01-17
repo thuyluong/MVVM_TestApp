@@ -7,9 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
 
-@interface NetworkManager : NSObject
+@class DeviceInfo;
 
+@interface NetworkManager : AFHTTPRequestOperationManager
 
++ (id)sharedManager;
+- (void)loginWithUsername:(NSString *)username
+                 password:(NSString *)password
+               deviceInfo:(DeviceInfo *)deviceInfo
+                  success:(void(^)(BOOL result))success
+                  failure:(void(^)(NSError *error))failure;
 
 @end

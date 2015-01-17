@@ -10,7 +10,7 @@
 
 @interface LoginViewModel : NSObject
 
-@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *password;
 
 - (BOOL)userNameIsEmailFormat;

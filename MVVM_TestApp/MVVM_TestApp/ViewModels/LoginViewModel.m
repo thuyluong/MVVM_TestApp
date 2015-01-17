@@ -13,7 +13,7 @@
 
 - (BOOL)userNameIsEmailFormat
 {
-    return [self.userName isEmailFormat];
+    return [self.username isEmailFormat];
 }
 
 @end

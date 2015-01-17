@@ -10,4 +10,10 @@
 
 @interface DeviceInfo : NSObject
 
+@property (nonatomic, strong) NSString *deviceToken;
+@property (nonatomic, strong) NSString *deviceName;
+@property (nonatomic, strong) NSString *deviceOSName;
+@property (nonatomic, strong) NSString *deviceOSVersion;
+@property (nonatomic, strong) NSString *deviceModel;
+
 @end

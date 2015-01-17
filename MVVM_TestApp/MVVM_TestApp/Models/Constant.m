@@ -8,6 +8,8 @@
 
 #import "Constant.h"
 
+NSString* const authTokenKey = @"auth_token_UD";
+
 @implementation Constant
 
 @end

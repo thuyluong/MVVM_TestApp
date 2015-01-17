@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const authTokenKey;
+
 @interface Constant : NSObject
 
 @end

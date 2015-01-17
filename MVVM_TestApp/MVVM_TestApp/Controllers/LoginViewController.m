@@ -43,7 +43,7 @@
 
 - (IBAction)loginAction:(id)sender
 {
-    self.loginViewModel.userName = self.userNameTf.text;
+    self.loginViewModel.username = self.userNameTf.text;
     self.loginViewModel.password = self.passwordTf.text;
     if ([self.loginViewModel userNameIsEmailFormat]) {
         
