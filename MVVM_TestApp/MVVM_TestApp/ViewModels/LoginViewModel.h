@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class LoginViewController;
+@class User;
+
 @interface LoginViewModel : NSObject
 
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *password;
 
-- (BOOL)userNameIsEmailFormat;
+- (instancetype)initWithLoginViewController:(LoginViewController *)loginViewController;
+- (BOOL)isValidUserName;
+- (void)startLogin;
 
 @end

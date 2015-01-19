@@ -45,9 +45,15 @@
 {
     self.loginViewModel.username = self.userNameTf.text;
     self.loginViewModel.password = self.passwordTf.text;
-    if ([self.loginViewModel userNameIsEmailFormat]) {
-        
+    if ([self.loginViewModel isValidUserName]) {
+        [self.loginViewModel startLogin];
     }
+}
+
+#pragma mark -
+- (void)finishLogin
+{
+    [self performSegueWithIdentifier:@"FinishLoginSegue" sender:nil];
 }
 
 @end

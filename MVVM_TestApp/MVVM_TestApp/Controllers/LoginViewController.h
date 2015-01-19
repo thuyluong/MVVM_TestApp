@@ -10,6 +10,6 @@
 
 @interface LoginViewController : UIViewController
 
-
+- (void)finishLogin;
 
 @end
