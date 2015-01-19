@@ -10,6 +10,7 @@
 #import <AFNetworking/AFNetworking.h>
 
 @class DeviceInfo;
+@class User;
 
 @interface NetworkManager : AFHTTPRequestOperationManager
 
