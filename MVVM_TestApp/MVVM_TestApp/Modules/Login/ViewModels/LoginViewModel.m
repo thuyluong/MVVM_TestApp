@@ -29,7 +29,7 @@
     }
     return self;
 }
-
+ 
 - (BOOL)isValidUserName
 {
     return [self.username isEmailFormat];
@@ -38,7 +38,9 @@
 - (void)startLogin
 {
     DeviceInfo *deviceInfo = [DeviceInfo updateFromUserDefault];
-    [[UserManager sharedManager] loginWithUsername:self.username password:self.password deviceInfo:deviceInfo completion:^(User *user, NSError *error) {
+    [[UserManager sharedManager] loginWithUsername:self.username
+                                          password:self.password
+                                        deviceInfo:deviceInfo completion:^(User *user, NSError *error) {
         if (user && !error) {
             [self.loginViewController finishLogin];
         }

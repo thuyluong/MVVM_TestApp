@@ -10,9 +10,10 @@
 #import <AFNetworking/AFNetworking.h>
 
 @class DeviceInfo;
+@class User;
 
-@interface NetworkManager : AFHTTPRequestOperationManager
+@interface NetworkProvider : AFHTTPRequestOperationManager
 
-+ (id)sharedManager;
++ (instancetype)sharedInstance;
 
 @end

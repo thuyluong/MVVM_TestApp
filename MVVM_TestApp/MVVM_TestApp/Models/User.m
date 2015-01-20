@@ -10,4 +10,13 @@
 
 @implementation User
 
++ (NSDictionary *)JSONKeyPathsByPropertyKey
+{
+    return @{@"userID" : @"",
+             @"groupID" : @"",
+             @"username" : @"",
+             @"displayName" : @"",
+             @"fullName" : @"" };
+}
+
 @end

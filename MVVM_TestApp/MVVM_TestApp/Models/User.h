@@ -7,8 +7,9 @@
 //
 
 #import "MTLModel.h"
+#import <Mantle.h>
 
-@interface User : MTLModel
+@interface User : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, strong) NSString *userID;
 @property (nonatomic, strong) NSString *groupID;

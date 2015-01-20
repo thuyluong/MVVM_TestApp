@@ -32,9 +32,9 @@
 
 - (LoginViewModel *)loginViewModel
 {
-    dispatch_once_t once;
-    dispatch_once(&once, ^{
-        _loginViewModel = [[LoginViewModel alloc] init];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _loginViewModel = [[LoginViewModel alloc] initWithLoginViewController:self];
     });
     return _loginViewModel;
 }
@@ -53,7 +53,8 @@
 #pragma mark -
 - (void)finishLogin
 {
-    [self performSegueWithIdentifier:@"FinishLoginSegue" sender:nil];
+    UINavigationController *navigationController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"NavigationControllerID"];
+    self.view.window.rootViewController = navigationController;
 }
 
 @end
