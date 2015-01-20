@@ -25,6 +25,8 @@
 		DAD6D97B1A6E671600677615 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6D9751A6E671600677615 /* LoginViewModel.m */; };
 		DAD6D97E1A6E674B00677615 /* PostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6D97D1A6E674B00677615 /* PostListViewController.m */; };
 		DAD6D9811A6E676400677615 /* PostListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6D9801A6E676400677615 /* PostListViewModel.m */; };
+		DAD6D9841A6E6A6F00677615 /* PostListDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6D9831A6E6A6F00677615 /* PostListDatasource.m */; };
+		DAD6D9871A6E6A8000677615 /* PostListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6D9861A6E6A8000677615 /* PostListDelegate.m */; };
 		E3E3BF2C5372C184744313C1 /* libPods-MVVM_TestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 099A3415BB4581527F7681DB /* libPods-MVVM_TestApp.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,10 @@
 		DAD6D97D1A6E674B00677615 /* PostListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostListViewController.m; sourceTree = "<group>"; };
 		DAD6D97F1A6E676400677615 /* PostListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostListViewModel.h; sourceTree = "<group>"; };
 		DAD6D9801A6E676400677615 /* PostListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostListViewModel.m; sourceTree = "<group>"; };
+		DAD6D9821A6E6A6F00677615 /* PostListDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostListDatasource.h; sourceTree = "<group>"; };
+		DAD6D9831A6E6A6F00677615 /* PostListDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostListDatasource.m; sourceTree = "<group>"; };
+		DAD6D9851A6E6A8000677615 /* PostListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostListDelegate.h; sourceTree = "<group>"; };
+		DAD6D9861A6E6A8000677615 /* PostListDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostListDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +296,10 @@
 			children = (
 				DAD6D97F1A6E676400677615 /* PostListViewModel.h */,
 				DAD6D9801A6E676400677615 /* PostListViewModel.m */,
+				DAD6D9821A6E6A6F00677615 /* PostListDatasource.h */,
+				DAD6D9831A6E6A6F00677615 /* PostListDatasource.m */,
+				DAD6D9851A6E6A8000677615 /* PostListDelegate.h */,
+				DAD6D9861A6E6A8000677615 /* PostListDelegate.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -439,7 +449,9 @@
 				DAD6D97E1A6E674B00677615 /* PostListViewController.m in Sources */,
 				DA21706F1A66D4D100B351D2 /* NetworkProvider.m in Sources */,
 				DACD24111A6D5F5000C4BF16 /* UserManager.m in Sources */,
+				DAD6D9871A6E6A8000677615 /* PostListDelegate.m in Sources */,
 				DAD6D97B1A6E671600677615 /* LoginViewModel.m in Sources */,
+				DAD6D9841A6E6A6F00677615 /* PostListDatasource.m in Sources */,
 				DA8E7F341A66CE010041B782 /* main.m in Sources */,
 				DAD6D97A1A6E671600677615 /* LoginViewController.m in Sources */,
 				DAD6D96A1A6E4A6800677615 /* BaseManager.m in Sources */,

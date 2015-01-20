@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class PostListViewController;
+
 @interface PostListViewModel : NSObject
+
+- (instancetype)initWithPostListViewController:(PostListViewController *)postListViewController;
 
 @end

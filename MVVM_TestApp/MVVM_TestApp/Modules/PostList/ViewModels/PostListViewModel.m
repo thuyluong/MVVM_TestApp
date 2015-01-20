@@ -7,6 +7,13 @@
 //
 
 #import "PostListViewModel.h"
+#import "PostListViewController.h"
+
+@interface PostListViewModel()
+
+@property (nonatomic, weak) PostListViewController *postListViewController;
+
+@end
 
 @implementation PostListViewModel
 
