@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA2170621A66D3E700B351D2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2170611A66D3E700B351D2 /* LoginViewController.m */; };
 		DA21706A1A66D48300B351D2 /* NSString+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2170691A66D48300B351D2 /* NSString+Addition.m */; };
-		DA21706F1A66D4D100B351D2 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21706E1A66D4D100B351D2 /* NetworkManager.m */; };
+		DA21706F1A66D4D100B351D2 /* NetworkProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21706E1A66D4D100B351D2 /* NetworkProvider.m */; };
 		DA2170761A66D66E00B351D2 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2170751A66D66E00B351D2 /* Post.m */; };
 		DA2170791A66D6A300B351D2 /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2170781A66D6A300B351D2 /* DeviceInfo.m */; };
 		DA46B01C1A6816E60032E87B /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46B01B1A6816E60032E87B /* Constant.m */; };
@@ -19,10 +18,13 @@
 		DA8E7F3F1A66CE010041B782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8E7F3E1A66CE010041B782 /* Images.xcassets */; };
 		DA8E7F421A66CE010041B782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8E7F401A66CE010041B782 /* LaunchScreen.xib */; };
 		DA8E7F4E1A66CE010041B782 /* MVVM_TestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E7F4D1A66CE010041B782 /* MVVM_TestAppTests.m */; };
-		DA8E7F601A66D0030041B782 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E7F5F1A66D0030041B782 /* LoginViewModel.m */; };
-		DAA26C3D1A6CE74D003626C9 /* PostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA26C3C1A6CE74D003626C9 /* PostListViewController.m */; };
 		DAA6FB261A6ABF110086F36F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA6FB251A6ABF110086F36F /* User.m */; };
 		DACD24111A6D5F5000C4BF16 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DACD24101A6D5F5000C4BF16 /* UserManager.m */; };
+		DAD6D96A1A6E4A6800677615 /* BaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6D9691A6E4A6800677615 /* BaseManager.m */; };
+		DAD6D97A1A6E671600677615 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6D9721A6E671600677615 /* LoginViewController.m */; };
+		DAD6D97B1A6E671600677615 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6D9751A6E671600677615 /* LoginViewModel.m */; };
+		DAD6D97E1A6E674B00677615 /* PostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6D97D1A6E674B00677615 /* PostListViewController.m */; };
+		DAD6D9811A6E676400677615 /* PostListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6D9801A6E676400677615 /* PostListViewModel.m */; };
 		E3E3BF2C5372C184744313C1 /* libPods-MVVM_TestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 099A3415BB4581527F7681DB /* libPods-MVVM_TestApp.a */; };
 /* End PBXBuildFile section */
 
@@ -40,12 +42,10 @@
 		099A3415BB4581527F7681DB /* libPods-MVVM_TestApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVM_TestApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		152896C7DCD937A47A97FE0A /* Pods-MVVM_TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_TestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM_TestApp/Pods-MVVM_TestApp.release.xcconfig"; sourceTree = "<group>"; };
 		759CCC1B5643C419FC005219 /* Pods-MVVM_TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_TestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM_TestApp/Pods-MVVM_TestApp.debug.xcconfig"; sourceTree = "<group>"; };
-		DA2170601A66D3E700B351D2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		DA2170611A66D3E700B351D2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		DA2170681A66D48300B351D2 /* NSString+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Addition.h"; sourceTree = "<group>"; };
 		DA2170691A66D48300B351D2 /* NSString+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Addition.m"; sourceTree = "<group>"; };
-		DA21706D1A66D4D100B351D2 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
-		DA21706E1A66D4D100B351D2 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		DA21706D1A66D4D100B351D2 /* NetworkProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkProvider.h; sourceTree = "<group>"; };
+		DA21706E1A66D4D100B351D2 /* NetworkProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkProvider.m; sourceTree = "<group>"; };
 		DA2170741A66D66E00B351D2 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		DA2170751A66D66E00B351D2 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		DA2170771A66D6A300B351D2 /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
@@ -63,14 +63,20 @@
 		DA8E7F471A66CE010041B782 /* MVVM_TestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVM_TestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8E7F4C1A66CE010041B782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8E7F4D1A66CE010041B782 /* MVVM_TestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVM_TestAppTests.m; sourceTree = "<group>"; };
-		DA8E7F5E1A66D0030041B782 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
-		DA8E7F5F1A66D0030041B782 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
-		DAA26C3B1A6CE74D003626C9 /* PostListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostListViewController.h; sourceTree = "<group>"; };
-		DAA26C3C1A6CE74D003626C9 /* PostListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostListViewController.m; sourceTree = "<group>"; };
 		DAA6FB241A6ABF110086F36F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		DAA6FB251A6ABF110086F36F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		DACD240F1A6D5F5000C4BF16 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
 		DACD24101A6D5F5000C4BF16 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		DAD6D9681A6E4A6800677615 /* BaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseManager.h; sourceTree = "<group>"; };
+		DAD6D9691A6E4A6800677615 /* BaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseManager.m; sourceTree = "<group>"; };
+		DAD6D9711A6E671600677615 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		DAD6D9721A6E671600677615 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		DAD6D9741A6E671600677615 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		DAD6D9751A6E671600677615 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		DAD6D97C1A6E674B00677615 /* PostListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostListViewController.h; sourceTree = "<group>"; };
+		DAD6D97D1A6E674B00677615 /* PostListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostListViewController.m; sourceTree = "<group>"; };
+		DAD6D97F1A6E676400677615 /* PostListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostListViewModel.h; sourceTree = "<group>"; };
+		DAD6D9801A6E676400677615 /* PostListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostListViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +127,10 @@
 		DA21706C1A66D4BB00B351D2 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				DA21706D1A66D4D100B351D2 /* NetworkManager.h */,
-				DA21706E1A66D4D100B351D2 /* NetworkManager.m */,
+				DA21706D1A66D4D100B351D2 /* NetworkProvider.h */,
+				DA21706E1A66D4D100B351D2 /* NetworkProvider.m */,
+				DAD6D9681A6E4A6800677615 /* BaseManager.h */,
+				DAD6D9691A6E4A6800677615 /* BaseManager.m */,
 				DACD240F1A6D5F5000C4BF16 /* UserManager.h */,
 				DACD24101A6D5F5000C4BF16 /* UserManager.m */,
 			);
@@ -171,8 +179,7 @@
 				DA2170701A66D65200B351D2 /* Models */,
 				DA2170671A66D47900B351D2 /* Categories */,
 				DA8E7F5B1A66CF1F0041B782 /* View */,
-				DA8E7F5C1A66CF1F0041B782 /* ViewModels */,
-				DA8E7F571A66CF1F0041B782 /* Controllers */,
+				DAD6D96E1A6E671600677615 /* Modules */,
 				DA8E7F351A66CE010041B782 /* AppDelegate.h */,
 				DA8E7F361A66CE010041B782 /* AppDelegate.m */,
 				DA8E7F3B1A66CE010041B782 /* Main.storyboard */,
@@ -209,17 +216,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DA8E7F571A66CF1F0041B782 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				DA2170601A66D3E700B351D2 /* LoginViewController.h */,
-				DA2170611A66D3E700B351D2 /* LoginViewController.m */,
-				DAA26C3B1A6CE74D003626C9 /* PostListViewController.h */,
-				DAA26C3C1A6CE74D003626C9 /* PostListViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		DA8E7F5B1A66CF1F0041B782 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,11 +223,73 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		DA8E7F5C1A66CF1F0041B782 /* ViewModels */ = {
+		DAD6D96E1A6E671600677615 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				DA8E7F5E1A66D0030041B782 /* LoginViewModel.h */,
-				DA8E7F5F1A66D0030041B782 /* LoginViewModel.m */,
+				DAD6D96F1A6E671600677615 /* Login */,
+				DAD6D9771A6E671600677615 /* PostList */,
+				DAD6D9761A6E671600677615 /* PostDetail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DAD6D96F1A6E671600677615 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6D9701A6E671600677615 /* Controllers */,
+				DAD6D9731A6E671600677615 /* ViewModels */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DAD6D9701A6E671600677615 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6D9711A6E671600677615 /* LoginViewController.h */,
+				DAD6D9721A6E671600677615 /* LoginViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DAD6D9731A6E671600677615 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6D9741A6E671600677615 /* LoginViewModel.h */,
+				DAD6D9751A6E671600677615 /* LoginViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DAD6D9761A6E671600677615 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PostDetail;
+			sourceTree = "<group>";
+		};
+		DAD6D9771A6E671600677615 /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6D9791A6E671600677615 /* ViewModels */,
+				DAD6D9781A6E671600677615 /* Controllers */,
+			);
+			path = PostList;
+			sourceTree = "<group>";
+		};
+		DAD6D9781A6E671600677615 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6D97C1A6E674B00677615 /* PostListViewController.h */,
+				DAD6D97D1A6E674B00677615 /* PostListViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DAD6D9791A6E671600677615 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6D97F1A6E676400677615 /* PostListViewModel.h */,
+				DAD6D9801A6E676400677615 /* PostListViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -371,18 +429,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA8E7F601A66D0030041B782 /* LoginViewModel.m in Sources */,
 				DA46B01C1A6816E60032E87B /* Constant.m in Sources */,
-				DA2170621A66D3E700B351D2 /* LoginViewController.m in Sources */,
 				DA2170761A66D66E00B351D2 /* Post.m in Sources */,
 				DA21706A1A66D48300B351D2 /* NSString+Addition.m in Sources */,
 				DAA6FB261A6ABF110086F36F /* User.m in Sources */,
+				DAD6D9811A6E676400677615 /* PostListViewModel.m in Sources */,
 				DA8E7F371A66CE010041B782 /* AppDelegate.m in Sources */,
-				DAA26C3D1A6CE74D003626C9 /* PostListViewController.m in Sources */,
 				DA2170791A66D6A300B351D2 /* DeviceInfo.m in Sources */,
-				DA21706F1A66D4D100B351D2 /* NetworkManager.m in Sources */,
+				DAD6D97E1A6E674B00677615 /* PostListViewController.m in Sources */,
+				DA21706F1A66D4D100B351D2 /* NetworkProvider.m in Sources */,
 				DACD24111A6D5F5000C4BF16 /* UserManager.m in Sources */,
+				DAD6D97B1A6E671600677615 /* LoginViewModel.m in Sources */,
 				DA8E7F341A66CE010041B782 /* main.m in Sources */,
+				DAD6D97A1A6E671600677615 /* LoginViewController.m in Sources */,
+				DAD6D96A1A6E4A6800677615 /* BaseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

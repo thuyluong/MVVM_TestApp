@@ -10,22 +10,12 @@
 #import "DeviceInfo.h"
 #import "User.h"
 #import "Constant.h"
-#import "NetworkManager.h"
+#import "NetworkProvider.h"
 #import <Mantle.h>
 
-static NSString* const loginURL = @"/user/login";
+static NSString* const loginURL = @"user/login";
 
 @implementation UserManager
-
-+ (id)sharedManager
-{
-    static UserManager *sharedInstance = nil;
-    dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[UserManager alloc] init];
-    });
-    return sharedInstance;
-}
 
 - (void)loginWithUsername:(NSString *)username
                  password:(NSString *)password
@@ -40,10 +30,12 @@ static NSString* const loginURL = @"/user/login";
                              @"device_os_version" : deviceInfo.deviceOSVersion,
                              @"device_model" : deviceInfo.deviceModel};
     
-    [[NetworkManager sharedManager] POST:loginURL parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+    [self.provider POST:loginURL parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self handleLoginSuccessWithData:responseObject completion:completion];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+        NSData *errorData = [error userInfo][@"com.alamofire.serialization.response.error.data"];
+        NSString *errorString = [[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding];
     }];
 }
 

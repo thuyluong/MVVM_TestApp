@@ -16,14 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5o-99-2Kv">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="user@test.com" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5o-99-2Kv">
                                 <rect key="frame" x="45" y="91" width="230" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ig9-af-c0Z">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ig9-af-c0Z">
                                 <rect key="frame" x="45" y="134" width="230" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEy-mr-tyu">
@@ -42,30 +45,53 @@
                     <connections>
                         <outlet property="passwordTf" destination="ig9-af-c0Z" id="smj-Q1-JV1"/>
                         <outlet property="userNameTf" destination="y5o-99-2Kv" id="lEz-cT-zGh"/>
-                        <segue destination="W04-Jx-CY9" kind="replace" identifier="FinishLoginSegue" splitViewControllerTargetIndex="1" id="iF1-3M-hgI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="251.73333333333332" y="287.78666666666669"/>
+            <point key="canvasLocation" x="260" y="291"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="cHc-dN-n1h">
+        <!--Post list-->
+        <scene sceneID="wsi-mS-NSd">
             <objects>
-                <viewController id="W04-Jx-CY9" sceneMemberID="viewController">
+                <viewController id="qwj-bX-zkW" customClass="PostListViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KCX-mh-d1T"/>
-                        <viewControllerLayoutGuide type="bottom" id="lDK-Q5-bcp"/>
+                        <viewControllerLayoutGuide type="top" id="ADI-mz-ZBv"/>
+                        <viewControllerLayoutGuide type="bottom" id="JEq-P5-7py"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qof-hV-RPZ">
+                    <view key="view" contentMode="scaleToFill" id="8qU-7I-G9K">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Tgs-Yc-NVq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Post list" id="BS8-66-VFg"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3rF-Yf-ZKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Iw-Bk-cJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="287"/>
+            <point key="canvasLocation" x="1097" y="291"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7eK-yv-CQd">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationControllerID" id="ygt-X9-FXI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Qgz-gQ-c48"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wft-nb-Oj3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qwj-bX-zkW" kind="relationship" relationship="rootViewController" id="kSC-BI-a1K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fqk-6u-xbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="291"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

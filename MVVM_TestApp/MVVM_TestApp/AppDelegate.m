@@ -16,14 +16,25 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
-    
+    NSString *devToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"deviceToken"];
+    if (!devToken) {
+        devToken = [[[[deviceToken description]
+                      stringByReplacingOccurrencesOfString:@"<"withString:@""]
+                     stringByReplacingOccurrencesOfString:@">" withString:@""]
+                    stringByReplacingOccurrencesOfString: @" " withString: @""];
+        [[NSUserDefaults standardUserDefaults] setObject:devToken forKey:@"deviceToken"];
+    }
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
     {
-        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        UIUserNotificationSettings *settings =
+        [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert |
+         UIUserNotificationTypeBadge |
+         UIUserNotificationTypeSound categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
         [[UIApplication sharedApplication] registerForRemoteNotifications];
     }
     else
@@ -31,6 +42,9 @@
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
          (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
     }
+    
+    NSString *deviceToken = @"aaaaaa";
+    [[NSUserDefaults standardUserDefaults] setObject:deviceToken forKey:@"deviceToken"];
     
     return YES;
 }

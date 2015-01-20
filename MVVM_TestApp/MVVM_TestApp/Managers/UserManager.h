@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseManager.h"
 
 @class DeviceInfo;
 @class User;
 
-@interface UserManager : NSObject
+@interface UserManager : BaseManager
 
-+ (id)sharedManager;
 - (void)loginWithUsername:(NSString *)username
                  password:(NSString *)password
                deviceInfo:(DeviceInfo *)deviceInfo
