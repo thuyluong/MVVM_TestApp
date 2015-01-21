@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface PostListDatasource : NSObject
+@class PostListViewModel;
+
+@interface PostListDatasource : NSObject <UITableViewDataSource>
+
+@property (nonatomic, weak) PostListViewModel *postListViewModel;
+@property (nonatomic, weak) UITableView *tableView;
+
+- (instancetype)initWithTableView:(UITableView *)tableView;
 
 @end
