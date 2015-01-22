@@ -11,8 +11,6 @@
 
 
 static NSString* const baseURL = @"http://dev.likeitfindit.com.au/apps/api";
-static NSString* const getPostsURL = @"/index/get-post";
-static NSString* const getPostDetailURL = @"/index/post-detail";
 
 @implementation NetworkProvider
 

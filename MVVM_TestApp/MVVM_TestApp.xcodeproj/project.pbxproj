@@ -27,6 +27,9 @@
 		DAD6D9811A6E676400677615 /* PostListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6D9801A6E676400677615 /* PostListViewModel.m */; };
 		DAD6D9841A6E6A6F00677615 /* PostListDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6D9831A6E6A6F00677615 /* PostListDatasource.m */; };
 		DAD6D9871A6E6A8000677615 /* PostListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6D9861A6E6A8000677615 /* PostListDelegate.m */; };
+		DAFF99F51A70AE37005D9ECA /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFF99F41A70AE37005D9ECA /* BlockAlertView.m */; };
+		DAFF99F81A70F39A005D9ECA /* PostManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFF99F71A70F39A005D9ECA /* PostManager.m */; };
+		DAFF99FE1A70F4D1005D9ECA /* NSDictionary+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFF99FD1A70F4D1005D9ECA /* NSDictionary+Addition.m */; };
 		E3E3BF2C5372C184744313C1 /* libPods-MVVM_TestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 099A3415BB4581527F7681DB /* libPods-MVVM_TestApp.a */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +86,12 @@
 		DAD6D9831A6E6A6F00677615 /* PostListDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostListDatasource.m; sourceTree = "<group>"; };
 		DAD6D9851A6E6A8000677615 /* PostListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostListDelegate.h; sourceTree = "<group>"; };
 		DAD6D9861A6E6A8000677615 /* PostListDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostListDelegate.m; sourceTree = "<group>"; };
+		DAFF99F31A70AE37005D9ECA /* BlockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockAlertView.h; sourceTree = SOURCE_ROOT; };
+		DAFF99F41A70AE37005D9ECA /* BlockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockAlertView.m; sourceTree = SOURCE_ROOT; };
+		DAFF99F61A70F39A005D9ECA /* PostManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostManager.h; sourceTree = "<group>"; };
+		DAFF99F71A70F39A005D9ECA /* PostManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostManager.m; sourceTree = "<group>"; };
+		DAFF99FC1A70F4D1005D9ECA /* NSDictionary+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Addition.h"; sourceTree = "<group>"; };
+		DAFF99FD1A70F4D1005D9ECA /* NSDictionary+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Addition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +135,8 @@
 			children = (
 				DA2170681A66D48300B351D2 /* NSString+Addition.h */,
 				DA2170691A66D48300B351D2 /* NSString+Addition.m */,
+				DAFF99FC1A70F4D1005D9ECA /* NSDictionary+Addition.h */,
+				DAFF99FD1A70F4D1005D9ECA /* NSDictionary+Addition.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -139,6 +150,8 @@
 				DAD6D9691A6E4A6800677615 /* BaseManager.m */,
 				DACD240F1A6D5F5000C4BF16 /* UserManager.h */,
 				DACD24101A6D5F5000C4BF16 /* UserManager.m */,
+				DAFF99F61A70F39A005D9ECA /* PostManager.h */,
+				DAFF99F71A70F39A005D9ECA /* PostManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -225,6 +238,8 @@
 		DA8E7F5B1A66CF1F0041B782 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DAFF99F31A70AE37005D9ECA /* BlockAlertView.h */,
+				DAFF99F41A70AE37005D9ECA /* BlockAlertView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -440,7 +455,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA46B01C1A6816E60032E87B /* Constant.m in Sources */,
+				DAFF99F51A70AE37005D9ECA /* BlockAlertView.m in Sources */,
 				DA2170761A66D66E00B351D2 /* Post.m in Sources */,
+				DAFF99FE1A70F4D1005D9ECA /* NSDictionary+Addition.m in Sources */,
 				DA21706A1A66D48300B351D2 /* NSString+Addition.m in Sources */,
 				DAA6FB261A6ABF110086F36F /* User.m in Sources */,
 				DAD6D9811A6E676400677615 /* PostListViewModel.m in Sources */,
@@ -449,6 +466,7 @@
 				DAD6D97E1A6E674B00677615 /* PostListViewController.m in Sources */,
 				DA21706F1A66D4D100B351D2 /* NetworkProvider.m in Sources */,
 				DACD24111A6D5F5000C4BF16 /* UserManager.m in Sources */,
+				DAFF99F81A70F39A005D9ECA /* PostManager.m in Sources */,
 				DAD6D9871A6E6A8000677615 /* PostListDelegate.m in Sources */,
 				DAD6D97B1A6E671600677615 /* LoginViewModel.m in Sources */,
 				DAD6D9841A6E6A6F00677615 /* PostListDatasource.m in Sources */,

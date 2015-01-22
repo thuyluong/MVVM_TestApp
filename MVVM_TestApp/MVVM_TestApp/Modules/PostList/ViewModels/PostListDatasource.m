@@ -36,7 +36,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostListCell" forIndexPath:indexPath];
     Post *postItem = [self.postListViewModel postItemForIndexPath:indexPath];
-    cell.textLabel.text = postItem.
+    return cell;
 }
 
 @end

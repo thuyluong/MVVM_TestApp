@@ -13,8 +13,8 @@
 
 @interface PostListDelegate : NSObject <UITableViewDelegate>
 
-@property (nonatomic, weak) PostListViewModel *postListViewModel;
+@property (nonatomic, weak) UITableView *tableView;
 
-- (instancetype)initWithPostListViewModel:(PostListViewModel *)postListViewModel;
+- (instancetype)initWithTableView:(UITableView *)tableView;
 
 @end

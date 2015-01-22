@@ -11,11 +11,11 @@
 
 @implementation PostListDelegate
 
-- (instancetype)initWithPostListViewModel:(PostListViewModel *)postListViewModel
+- (instancetype)initWithTableView:(UITableView *)tableView
 {
     self = [super init];
     if (self) {
-        _postListViewModel = postListViewModel;
+        _tableView = tableView;
     }
     return self;
 }

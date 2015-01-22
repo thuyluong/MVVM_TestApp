@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "LoginViewModel.h"
+#import "BlockAlertView.h"
 
 @interface LoginViewController()
 
@@ -48,6 +49,18 @@
     if ([self.loginViewModel isValidUserName]) {
         [self.loginViewModel startLogin];
     }
+}
+
+- (void)showAlertView
+{
+    BlockAlertView *alertView = [[BlockAlertView alloc] initWithTitle:@"Alert title"
+                                                              message:@"Alert message" cancelButtonTitle:@"Cancel" otherButtonTitles: nil];
+    
+    [alertView addButtonWithTitle:@"Button 1" handleBlock:^(NSInteger buttonIndex) {
+        NSLog(@"you clicked button at index : %ld", buttonIndex);
+    }];
+    
+    [alertView  show];
 }
 
 #pragma mark -
