@@ -7,11 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @class PostListViewController;
+@class Post;
 
 @interface PostListViewModel : NSObject
 
-- (instancetype)initWithPostListViewController:(PostListViewController *)postListViewController;
+@property (nonatomic, weak) UITableView *tableView;
+
+- (instancetype)initWithTableView:(UITableView *)tableView;
+- (void)loadPostList;
+
+- (Post *)postItemForIndexPath:(NSIndexPath *)indexPath;
+- (NSInteger)numberOfSections;
+- (NSInteger)numberOfItemsInSection:(NSInteger)section;
+
 
 @end

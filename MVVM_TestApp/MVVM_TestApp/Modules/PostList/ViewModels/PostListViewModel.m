@@ -8,13 +8,59 @@
 
 #import "PostListViewModel.h"
 #import "PostListViewController.h"
+#import "PostListDatasource.h"
+#import "PostListDelegate.h"
+#import "Post.h"
 
 @interface PostListViewModel()
 
 @property (nonatomic, weak) PostListViewController *postListViewController;
 
+@property (nonatomic, strong) PostListDatasource *dataSource;
+@property (nonatomic, strong) PostListDelegate *delegate;
+
+@property (nonatomic, strong) NSMutableArray *postList;
+
 @end
 
 @implementation PostListViewModel
+
+#pragma mark - Alloc
+- (instancetype)initWithTableView:(UITableView *)tableView
+{
+    self = [super init];
+    if (self) {
+        _tableView = tableView;
+    }
+    return self;
+}
+
+#pragma mark -
+- (void)loadPostList
+{
+    // request get post
+    [self.tableView reloadData];
+}
+
+- (void)registerDataSourceAndDelegate
+{
+    self.dataSource = [PostListDatasource alloc] init
+}
+
+#pragma mark - DataSource
+- (NSInteger)numberOfSections
+{
+    return 1;
+}
+
+- (NSInteger)numberOfItemsInSection:(NSInteger)section
+{
+    return self.postList.count;
+}
+
+- (Post *)postItemForIndexPath:(NSIndexPath *)indexPath
+{
+    return self.postList[indexPath.row];
+}
 
 @end

@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface PostListDelegate : NSObject
+@class PostListViewModel;
+
+@interface PostListDelegate : NSObject <UITableViewDelegate>
+
+@property (nonatomic, weak) PostListViewModel *postListViewModel;
+
+- (instancetype)initWithPostListViewModel:(PostListViewModel *)postListViewModel;
 
 @end
