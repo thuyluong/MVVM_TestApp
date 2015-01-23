@@ -12,6 +12,8 @@
 		DA2170761A66D66E00B351D2 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2170751A66D66E00B351D2 /* Post.m */; };
 		DA2170791A66D6A300B351D2 /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2170781A66D6A300B351D2 /* DeviceInfo.m */; };
 		DA46B01C1A6816E60032E87B /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46B01B1A6816E60032E87B /* Constant.m */; };
+		DA80FA061A724192004D3B68 /* PostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA80FA051A724192004D3B68 /* PostDetailViewController.m */; };
+		DA80FA091A7241A0004D3B68 /* PostDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA80FA081A7241A0004D3B68 /* PostDetailViewModel.m */; };
 		DA8E7F341A66CE010041B782 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E7F331A66CE010041B782 /* main.m */; };
 		DA8E7F371A66CE010041B782 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E7F361A66CE010041B782 /* AppDelegate.m */; };
 		DA8E7F3D1A66CE010041B782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8E7F3B1A66CE010041B782 /* Main.storyboard */; };
@@ -57,6 +59,10 @@
 		DA2170781A66D6A300B351D2 /* DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfo.m; sourceTree = "<group>"; };
 		DA46B01A1A6816E60032E87B /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		DA46B01B1A6816E60032E87B /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
+		DA80FA041A724192004D3B68 /* PostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailViewController.h; sourceTree = "<group>"; };
+		DA80FA051A724192004D3B68 /* PostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailViewController.m; sourceTree = "<group>"; };
+		DA80FA071A7241A0004D3B68 /* PostDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailViewModel.h; sourceTree = "<group>"; };
+		DA80FA081A7241A0004D3B68 /* PostDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailViewModel.m; sourceTree = "<group>"; };
 		DA8E7F2E1A66CE010041B782 /* MVVM_TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8E7F321A66CE010041B782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8E7F331A66CE010041B782 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -169,6 +175,24 @@
 				DA46B01B1A6816E60032E87B /* Constant.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DA80FA021A724181004D3B68 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA80FA041A724192004D3B68 /* PostDetailViewController.h */,
+				DA80FA051A724192004D3B68 /* PostDetailViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DA80FA031A724181004D3B68 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DA80FA071A7241A0004D3B68 /* PostDetailViewModel.h */,
+				DA80FA081A7241A0004D3B68 /* PostDetailViewModel.m */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		DA8E7F251A66CE010041B782 = {
@@ -284,6 +308,8 @@
 		DAD6D9761A6E671600677615 /* PostDetail */ = {
 			isa = PBXGroup;
 			children = (
+				DA80FA021A724181004D3B68 /* Controllers */,
+				DA80FA031A724181004D3B68 /* ViewModels */,
 			);
 			path = PostDetail;
 			sourceTree = "<group>";
@@ -455,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA46B01C1A6816E60032E87B /* Constant.m in Sources */,
+				DA80FA061A724192004D3B68 /* PostDetailViewController.m in Sources */,
 				DAFF99F51A70AE37005D9ECA /* BlockAlertView.m in Sources */,
 				DA2170761A66D66E00B351D2 /* Post.m in Sources */,
 				DAFF99FE1A70F4D1005D9ECA /* NSDictionary+Addition.m in Sources */,
@@ -468,6 +495,7 @@
 				DACD24111A6D5F5000C4BF16 /* UserManager.m in Sources */,
 				DAFF99F81A70F39A005D9ECA /* PostManager.m in Sources */,
 				DAD6D9871A6E6A8000677615 /* PostListDelegate.m in Sources */,
+				DA80FA091A7241A0004D3B68 /* PostDetailViewModel.m in Sources */,
 				DAD6D97B1A6E671600677615 /* LoginViewModel.m in Sources */,
 				DAD6D9841A6E6A6F00677615 /* PostListDatasource.m in Sources */,
 				DA8E7F341A66CE010041B782 /* main.m in Sources */,
