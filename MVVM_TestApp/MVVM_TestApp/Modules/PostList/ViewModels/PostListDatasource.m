@@ -10,13 +10,19 @@
 #import "PostListViewModel.h"
 #import "Post.h"
 
+@interface PostListDatasource()
+
+@property (nonatomic, weak) PostListViewModel *postListViewModel;
+
+@end
+
 @implementation PostListDatasource
 
-- (instancetype)initWithTableView:(UITableView *)tableView
+- (instancetype)initWithModel:(PostListViewModel *)viewModel
 {
     self = [super init];
     if (self) {
-        _tableView = tableView;
+        _postListViewModel = viewModel;
     }
     return self;
 }
@@ -36,6 +42,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostListCell" forIndexPath:indexPath];
     Post *postItem = [self.postListViewModel postItemForIndexPath:indexPath];
+    cell.textLabel.text = postItem.title;
     return cell;
 }
 

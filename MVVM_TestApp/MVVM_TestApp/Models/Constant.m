@@ -9,6 +9,7 @@
 #import "Constant.h"
 
 NSString* const authTokenKey = @"auth_token_UD";
+NSString *const currentUserKey = @"current_user";
 
 @implementation Constant
 

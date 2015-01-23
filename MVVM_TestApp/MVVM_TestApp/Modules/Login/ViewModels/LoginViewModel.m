@@ -42,7 +42,7 @@
                                           password:self.password
                                         deviceInfo:deviceInfo completion:^(User *user, NSError *error) {
         if (user && !error) {
-            // Save user
+            [[UserManager sharedManager] saveUser:user];
             [self.loginViewController finishLogin];
         }
     }];

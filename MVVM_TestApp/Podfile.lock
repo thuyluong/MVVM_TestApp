@@ -27,7 +27,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
-  - KVOController (~> 1.0.3)
+  - KVOController
   - Mantle (~> 1.5.3)
 
 SPEC CHECKSUMS:

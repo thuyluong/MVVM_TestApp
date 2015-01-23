@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 extern NSString *const authTokenKey;
+extern NSString *const currentUserKey;
 
 @interface Constant : NSObject
 

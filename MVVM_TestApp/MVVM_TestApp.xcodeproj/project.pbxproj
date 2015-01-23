@@ -257,8 +257,8 @@
 		DAD6D96F1A6E671600677615 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				DAD6D9701A6E671600677615 /* Controllers */,
 				DAD6D9731A6E671600677615 /* ViewModels */,
+				DAD6D9701A6E671600677615 /* Controllers */,
 			);
 			path = Login;
 			sourceTree = "<group>";

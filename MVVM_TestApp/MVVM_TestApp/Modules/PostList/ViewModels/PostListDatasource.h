@@ -13,9 +13,6 @@
 
 @interface PostListDatasource : NSObject <UITableViewDataSource>
 
-@property (nonatomic, weak) PostListViewModel *postListViewModel;
-@property (nonatomic, weak) UITableView *tableView;
-
-- (instancetype)initWithTableView:(UITableView *)tableView;
+- (instancetype)initWithModel:(PostListViewModel *)viewModel;
 
 @end

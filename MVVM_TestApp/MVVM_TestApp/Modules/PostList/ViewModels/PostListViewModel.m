@@ -11,16 +11,16 @@
 #import "PostListDatasource.h"
 #import "PostListDelegate.h"
 #import "PostManager.h"
+#import "UserManager.h"
 #import "Post.h"
+#import "User.h"
 #import <Mantle.h>
 
 @interface PostListViewModel()
 
 @property (nonatomic, weak) PostListViewController *postListViewController;
-
 @property (nonatomic, strong) PostListDatasource *dataSource;
 @property (nonatomic, strong) PostListDelegate *delegate;
-
 @property (nonatomic, strong) NSMutableArray *postList;
 
 @end
@@ -33,6 +33,7 @@
     self = [super init];
     if (self) {
         _tableView = tableView;
+        [self registerDataSourceAndDelegate];
     }
     return self;
 }
@@ -40,23 +41,18 @@
 #pragma mark -
 - (void)loadPostList
 {
-    if (!self.postList) {
-        self.postList = [NSMutableArray array];
-    }
-    // request get post
-    [[PostManager sharedManager] fetchPostOfUser:@"1000" completion:^(NSArray *postArray, NSError *error) {
-        for (NSDictionary *postDict in postArray) {
-            Post *post = [MTLJSONAdapter modelOfClass:[Post class] fromJSONDictionary:postDict error:nil];
-            [self.postList addObject:post];
-        }
-        [self.tableView reloadData];
+    User *currentUser = [UserManager currentUser];
+    [[PostManager sharedManager] fetchPostOfUser:currentUser.userID completion:^(NSArray *postArray, NSError *error) {
+        self.postList = [postArray mutableCopy];
     }];
 }
 
 - (void)registerDataSourceAndDelegate
 {
-    self.dataSource = [[PostListDatasource alloc] initWithTableView:self.tableView];
-    self.delegate = [[PostListDelegate alloc] initWithTableView:self.tableView];
+    self.dataSource = [[PostListDatasource alloc] initWithModel:self];
+    self.delegate = [[PostListDelegate alloc] initWithModel:self];
+    self.tableView.dataSource = self.dataSource;
+    self.tableView.delegate = self.delegate;
 }
 
 #pragma mark - DataSource

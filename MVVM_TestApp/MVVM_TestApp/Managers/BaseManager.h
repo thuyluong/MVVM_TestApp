@@ -14,5 +14,6 @@
 @property (nonatomic, weak) NetworkProvider* provider;
 
 + (instancetype)sharedManager;
++ (NSArray *)postModelsFromPostArray:(NSArray *)postArray;
 
 @end

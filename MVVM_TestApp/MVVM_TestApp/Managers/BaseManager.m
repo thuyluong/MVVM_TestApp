@@ -7,6 +7,8 @@
 //
 
 #import "BaseManager.h"
+#import <Mantle.h>
+#import "Post.h"
 
 @implementation BaseManager
 
@@ -19,15 +21,9 @@
     return self;
 }
 
-+ (instancetype)sharedManager
++ (NSArray *)postModelsFromPostArray:(NSArray *)postArray
 {
-    static id sharedInstance;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[self alloc] initWithNetworkProvider:[NetworkProvider sharedInstance]];
-    });
-    return sharedInstance;
+    return [MTLJSONAdapter modelsOfClass:[Post class] fromJSONArray:postArray error:nil];
 }
-
 
 @end

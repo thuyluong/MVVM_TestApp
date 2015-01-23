@@ -9,13 +9,19 @@
 #import "PostListDelegate.h"
 #import "PostListViewModel.h"
 
+@interface PostListDelegate()
+
+@property (nonatomic, weak) PostListViewModel *postListViewModel;
+
+@end
+
 @implementation PostListDelegate
 
-- (instancetype)initWithTableView:(UITableView *)tableView
+- (instancetype)initWithModel:(PostListViewModel *)viewModel
 {
     self = [super init];
     if (self) {
-        _tableView = tableView;
+        _postListViewModel = viewModel;
     }
     return self;
 }

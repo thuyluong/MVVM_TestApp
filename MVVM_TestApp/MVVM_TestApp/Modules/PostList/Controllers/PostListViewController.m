@@ -7,16 +7,25 @@
 //
 
 #import "PostListViewController.h"
+#import <KVOController/FBKVOController.h>
+#import "PostListViewModel.h"
 
 @interface PostListViewController ()
+
+@property (nonatomic, strong) PostListViewModel *postListViewModel;
+@property (nonatomic, weak) IBOutlet UITableView *postsTableView;
 
 @end
 
 @implementation PostListViewController
 
+#pragma mark - Life Cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.postListViewModel = [[PostListViewModel alloc] initWithTableView:self.postsTableView];
+    [self observerPostList];
+    [self.postListViewModel loadPostList];    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +33,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Posts list observer
+- (void)observerPostList
+{
+    FBKVOController *kvoController = [[FBKVOController alloc] initWithObserver:self];
+    self.KVOController = kvoController;
+    [self.KVOController observe:self.postListViewModel keyPath:@"postList" options:NSKeyValueObservingOptionNew block:^(id observer, id object, NSDictionary *change) {
+        [self.postsTableView reloadData];
+    }];
 }
-*/
 
 @end

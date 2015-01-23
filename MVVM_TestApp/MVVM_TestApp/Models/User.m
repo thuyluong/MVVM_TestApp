@@ -12,11 +12,11 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
-    return @{@"userID" : @"",
-             @"groupID" : @"",
-             @"username" : @"",
-             @"displayName" : @"",
-             @"fullName" : @"" };
+    return @{@"userID" : @"user_id",
+             @"groupID" : @"group_id",
+             @"username" : @"username",
+             @"displayName" : @"display_name",
+             @"fullName" : @"full_name" };
 }
 
 @end

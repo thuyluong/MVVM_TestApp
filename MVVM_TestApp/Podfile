@@ -5,7 +5,7 @@ target 'MVVM_TestApp' do
 
     pod 'Mantle', '~> 1.5.3'
     pod "AFNetworking", "~> 2.0"
-    pod 'KVOController', '~> 1.0.3'
+    pod 'KVOController'
     
 end
 

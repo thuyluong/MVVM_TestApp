@@ -17,6 +17,26 @@ static NSString* const loginURL = @"user/login";
 
 @implementation UserManager
 
+- (instancetype) initWithNetworkProvider:(NetworkProvider *)provider
+{
+    self = [super init];
+    if (self) {
+        self.provider = provider;
+    }
+    return self;
+}
+
++ (instancetype)sharedManager
+{
+    static UserManager *sharedInstance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[UserManager alloc] initWithNetworkProvider:[NetworkProvider sharedInstance]];
+    });
+    return sharedInstance;
+}
+
+
 - (void)loginWithUsername:(NSString *)username
                  password:(NSString *)password
                deviceInfo:(DeviceInfo *)deviceInfo
@@ -34,8 +54,9 @@ static NSString* const loginURL = @"user/login";
     [self.provider POST:loginURL parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self handleLoginSuccessWithData:responseObject completion:completion];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSData *errorData = [error userInfo][@"com.alamofire.serialization.response.error.data"];
-        NSString *errorString = [[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding];
+        //NSData *errorData = [error userInfo][@"com.alamofire.serialization.response.error.data"];
+        //NSString *errorString = [[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding];
+        completion(nil, error);
     }];
 }
 
@@ -54,6 +75,19 @@ static NSString* const loginURL = @"user/login";
         NSError *error = [NSError errorWithDomain:@"LIFI" code:errorCode userInfo:@{@"errorMessage" : errorMessage}];
         completion(nil, error);
     }
+}
+
+- (void)saveUser:(User *)user
+{
+    NSData *userData = [NSKeyedArchiver archivedDataWithRootObject:user];
+    [[NSUserDefaults standardUserDefaults] setObject:userData forKey:currentUserKey];
+}
+
++ (User *)currentUser
+{
+    NSData *userData = [[NSUserDefaults standardUserDefaults] objectForKey:currentUserKey];
+    User *user = [NSKeyedUnarchiver unarchiveObjectWithData:userData];
+    return user;
 }
 
 @end

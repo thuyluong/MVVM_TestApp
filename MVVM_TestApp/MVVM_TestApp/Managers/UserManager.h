@@ -19,4 +19,7 @@
                deviceInfo:(DeviceInfo *)deviceInfo
                completion:(void(^)(User *user, NSError *error))completion;
 
+- (void)saveUser:(User *)user;
++ (User *)currentUser;
+
 @end
